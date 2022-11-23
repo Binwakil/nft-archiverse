@@ -1,6 +1,7 @@
 # NEAR NFT-Tutorial
 
-Welcome to NEAR's NFT tutorial, where we will help you parse the details around NEAR's [NEP-171 standard](https://nomicon.io/Standards/NonFungibleToken/Core.html) (Non-Fungible Token Standard), and show you how to build your own NFT smart contract from the ground up, improving your understanding about the NFT standard along the way. 
+Welcome to ARCHIVERS NFT MARKETPLACE 
+this Contact was build base on [NEP-171 standard](https://nomicon.io/Standards/NonFungibleToken/Core.html) (Non-Fungible Token Standard), and show you how to build your own NFT smart contract from the ground up, improving your understanding about the NFT standard along the way. 
 
 ## Prerequisites
 
@@ -9,25 +10,6 @@ Welcome to NEAR's NFT tutorial, where we will help you parse the details around 
 * [NEAR-CLI](https://docs.near.org/tools/near-cli#setup)
 * [yarn](https://classic.yarnpkg.com/en/docs/install#mac-stable)
 
-## Tutorial Stages 
-
-Each branch you will find in this repo corresponds to various stages of this tutorial with a partially completed contract at each stage. You are welcome to start from any stage you want to learn the most about. 
-
-
-
-| Branch        | Docs Tutorial                                                                                    | Description |
-| ------------- | ------------------------------------------------------------------------------------------------ | ----------- |
-| 1.skeleton    | [Contract Architecture](https://docs.near.org/docs/tutorials/contracts/nfts/rs/skeleton) | You'll learn the basic architecture of the NFT smart contract, and you'll compile this skeleton code with the Rust toolchain.            |
-| 2.minting     | [Minting](https://docs.near.org/docs/tutorials/contracts/nfts/rs/minting)                |Here you'll flesh out the skeleton so the smart contract can mint a non-fungible token             |
-| 3.enumeration | [Enumeration](https://docs.near.org/docs/tutorials/contracts/nfts/rs/enumeration)        |    Here you'll find different enumeration methods that can be used to return the smart contract's states.          |
-| 4.core        | [Core](https://docs.near.org/docs/tutorials/contracts/nfts/rs/core)                      | In this tutorial you'll extend the NFT contract using the core standard, which will allow you to transfer non-fungible tokens.             |
-| 5.approval    | [Approval](https://docs.near.org/docs/tutorials/contracts/nfts/rs/approvals)             | Here you'll expand the contract allowing other accounts to transfer NFTs on your behalf.            |
-| 6.royalty     | [Royalty](https://docs.near.org/docs/tutorials/contracts/nfts/rs/royalty)                                                                                        |Here you'll add the ability for non-fungible tokens to have royalties. This will allow people to get a percentage of the purchase price when an NFT is purchased.             |
-| 7.events      | -----------                                                                                        |   This allows indexers to know what functions are being called and make it easier and more reliable to keep track of information that can be used to populate the collectibles tab in the wallet for example. (tutorial docs have yet to be implemented )          |
-| 8.marketplace | -----------                                                                                      | -----------             |
-
-
-The tutorial series also contains a very helpful section on [**Upgrading Smart Contracts**](https://docs.near.org/docs/tutorials/contracts/nfts/rs/upgrade-contract). Definitely go and check it out as this is a common pain point.
 
 # Quick-Start 
 
@@ -132,13 +114,3 @@ near call $NFT_CONTRACT_ID nft_transfer '{"receiver_id": "$MAIN_ACCOUNT_2", "tok
 ```
 
 In this call you are depositing 1 yoctoNEAR for security and so that the user will be redirected to the NEAR wallet.
-
-## Errata
-
-Large Changes:
-* **2022-06-21**: updated the rust SDK to version 4.0.0. PR found [here](https://github.com/near-examples/nft-tutorial/pull/32)
-
-* **2022-02-12**: updated the enumeration methods `nft_tokens` and `nft_tokens_for_owner` to no longer use any `to_vector` operations to save GAS. In addition, the default limit was changed from 0 to 50. PR found [here](https://github.com/near-examples/nft-tutorial/pull/17). 
-
-Small Changes:
-* **2022-02-22**: changed `token_id` parameter type in nft_payout from `String` to `TokenId` for consistency as per pythonicode's suggestion
