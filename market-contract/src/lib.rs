@@ -41,7 +41,6 @@ pub struct Payout {
     pub payout: HashMap<AccountId, U128>,
 } 
 
-
 //main contract struct to store all the information
 #[near_bindgen]
 #[derive(BorshDeserialize, BorshSerialize, PanicOnDefault)]
