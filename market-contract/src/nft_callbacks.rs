@@ -1,8 +1,8 @@
 use crate::*;
 
-/// approval callbacks from NFT Contracts
+/// approval callbacks from ArchiNFT Contracts, where we approve NFT to be sold in the market place
 
-//struct for keeping track of the sale conditions for a Sale
+//struct that keeps track of the sale conditions for a Sale
 #[derive(Serialize, Deserialize)]
 #[serde(crate = "near_sdk::serde")]
 pub struct SaleArgs {
@@ -46,7 +46,7 @@ impl NonFungibleTokenApprovalsReceiver for Contract {
         assert_ne!(
             nft_contract_id,
             signer_id,
-            "nft_on_approve should only be called via cross-contract call"
+            "The Archinft_on_approve should only be called via cross-contract call"
         );
         //make sure the owner ID is the signer. 
         assert_eq!(

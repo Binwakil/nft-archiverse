@@ -4,7 +4,7 @@ use crate::*;
 impl Contract {
     /// views
     
-    //returns the number of sales the marketplace has up (as a string)
+    //returns the number of sales the Archinft marketplace has up (as a string)
     pub fn get_supply_sales(
         &self,
     ) -> U64 {
@@ -12,14 +12,14 @@ impl Contract {
         U64(self.sales.len())
     }
     
-    //returns the number of sales for a given account (result is a string)
+    //returns the number of sales for a given owner account (result is a string)
     pub fn get_supply_by_owner_id(
         &self,
         account_id: AccountId,
     ) -> U64 {
         //get the set of sales for the given owner Id
         let by_owner_id = self.by_owner_id.get(&account_id);
-        
+    
         //if there as some set, we return the length but if there wasn't a set, we return 0
         if let Some(by_owner_id) = by_owner_id {
             U64(by_owner_id.len())
