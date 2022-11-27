@@ -1,27 +1,17 @@
-# NEAR NFT-Tutorial
+# ARCHIVERSE NFT MARKETPLACE 
 
 Welcome to ARCHIVERS NFT MARKETPLACE 
 this Contact was build base on [NEP-171 standard](https://nomicon.io/Standards/NonFungibleToken/Core.html) (Non-Fungible Token Standard), and show you how to build your own NFT smart contract from the ground up, improving your understanding about the NFT standard along the way. 
 
-## Prerequisites
-
-* [NEAR Wallet Account](wallet.testnet.near.org)
-* [Rust Toolchain](https://docs.near.org/develop/prerequisites)
-* [NEAR-CLI](https://docs.near.org/tools/near-cli#setup)
-* [yarn](https://classic.yarnpkg.com/en/docs/install#mac-stable)
 
 
 # Quick-Start 
 
 If you want to see the full completed contract go ahead and clone and build this repo using 
-
 ```=bash
-git clone https://github.com/near-examples/nft-tutorial.git 
-cd nft-tutorial
-git switch 6.royalty
+git clone https://github.com/Binwakil/nft-archiverse.git 
 yarn build
 ```
-
 Now that you've cloned and built the contract we can try a few things. 
 
 ## Mint An NFT
@@ -36,20 +26,21 @@ Once your logged in you have to deploy the contract. Make a subaccount with the 
 
 ```=bash 
 near create-account nft-example.your-account.testnet --masterAccount your-account.testnet --initialBalance 10
+near create-account market-example.your-account.testnet --masterAccount your-account.testnet --initialBalance 10
 ```
 
 After you've created your sub account deploy the contract to that sub account, set this variable to your sub account name
 
 ```=bash
 NFT_CONTRACT_ID=nft-example.your-account.testnet
-
+MARKET_CONTRACT_ID=nft-example.your-account.testnet
 MAIN_ACCOUNT=your-account.testnet
 ```
 
 Verify your new variable has the correct value
 ```=bash
 echo $NFT_CONTRACT_ID
-
+echo $MARKET_CONTRACT_ID
 echo $MAIN_ACCOUNT
 ```
 
@@ -57,6 +48,7 @@ echo $MAIN_ACCOUNT
 ### Deploy Your Contract
 ```=bash
 near deploy --accountId $NFT_CONTRACT_ID --wasmFile out/main.wasm
+near deploy --accountId $MARKET_CONTRACT_ID --wasmFile out/market.wasm
 ```
 
 ### Initialize Your Contract 
