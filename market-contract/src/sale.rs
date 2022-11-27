@@ -7,7 +7,7 @@ use near_sdk::promise_result_as_success;
 pub struct Sale {
     //owner of the sale
     pub owner_id: AccountId,
-    //market contract's approval ID to transfer the token on behalf of the owner
+    //market contract's approval ID to transfer the ArchiNFT token on behalf of the owner
     pub approval_id: u64,
     //nft contract where the token was minted
     pub nft_contract_id: String,

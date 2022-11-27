@@ -8,7 +8,7 @@ impl Contract {
         token_id: TokenId,
         metadata: TokenMetadata,
         receiver_id: AccountId,
-        //we add an optional parameter for perpetual royalties
+        //we add an optional parameter for perpetual royalties.
         perpetual_royalties: Option<HashMap<AccountId, u32>>,
     ) {
         //measure the initial storage being used on the contract
@@ -43,7 +43,7 @@ impl Contract {
         //insert the token ID and token struct and make sure that the token doesn't exist
         assert!(
             self.tokens_by_id.insert(&token_id, &token).is_none(),
-            "Token already exists"
+            "This Token already exists"
         );
 
         //insert the token ID and metadata

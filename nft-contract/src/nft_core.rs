@@ -5,7 +5,7 @@ const GAS_FOR_RESOLVE_TRANSFER: Gas = Gas(10_000_000_000_000);
 const GAS_FOR_NFT_ON_TRANSFER: Gas = Gas(25_000_000_000_000);
 
 pub trait NonFungibleTokenCore {
-    //transfers an NFT to a receiver ID
+    //transfers an ArchiNF to a receiver ID
     fn nft_transfer(
         &mut self,
         receiver_id: AccountId,

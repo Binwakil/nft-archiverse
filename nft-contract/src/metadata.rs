@@ -31,7 +31,7 @@ pub struct TokenMetadata {
     pub expires_at: Option<u64>, // When token expires, Unix epoch in milliseconds
     pub starts_at: Option<u64>, // When token starts being valid, Unix epoch in milliseconds
     pub updated_at: Option<u64>, // When token was last updated, Unix epoch in milliseconds
-    pub extra: Option<String>, // anything extra the NFT wants to store on-chain. Can be stringified JSON.
+    pub extra: Option<String>, // we use this to strore the Architectural Document URL. Can be stringified JSON.
     pub reference: Option<String>, // URL to an off-chain JSON file with more info.
     pub reference_hash: Option<Base64VecU8>, // Base64-encoded sha256 hash of JSON from reference field. Required if `reference` is included.
 }
