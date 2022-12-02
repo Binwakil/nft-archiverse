@@ -57,7 +57,6 @@ impl Contract {
             sale.owner_id,
             "Must be sale owner"
         );
-        
         //set the sale conditions equal to the passed in price
         sale.sale_conditions = price;
         //insert the sale back into the map for the unique sale ID

@@ -1,11 +1,11 @@
 {
-    "name": "nft-tutorial",
+    "name": "nft-archiverse",
     "version": "1.0.0",
     "description": "Archiverse NFT Marketplace",
     "author": "Wakili Almustapha",
     "license": "ISC",
     "scripts": {
-        "build": "cd nft-contract && bash build.sh && cd .. && ls && cd market-contract && bash build.sh && cd .. && cd nft-series && bash build.sh && cd ..",
+        "build": "cd nft-contract && bash build.sh && cd .. && ls && cd market-contract && bash build.sh && cd ..",
         "test": "npm run test:unit && npm run test:integration",
             "test:unit": "npm run test:unit:nft && npm run test:unit:market",
                 "test:unit:nft": "cd nft-contract && cargo test -- --nocapture --color=always && cd ..",
