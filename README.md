@@ -1,7 +1,9 @@
 # ARCHIVERSE NFT MARKETPLACE 
 
 Welcome to ARCHIVERS NFT MARKETPLACE 
-this Contact was build base on [NEP-171 standard](https://nomicon.io/Standards/NonFungibleToken/Core.html) (Non-Fungible Token Standard), and show you how to build your own NFT smart contract from the ground up, improving your understanding about the NFT standard along the way. 
+
+Archiverse is an NFT marketplace for architectural designs on the #near chain. It allows architects to mint 3D structures of buildings as an NFT and sell detailed architectural documents to the buyer. Unlike other forms of NFT markets that allow people to buy and sell art. Archiverse allows architects to literary sell the detailed design documents that contain the complete structure of the design to the customers, by minting the 3D design as an NFT and storing the Detailed Document on IPFS, encrypting its reference, and attaching it to the NFT as an extra.
+When a buy purchase the NFT  the reference is decrypted and the detailed design is made available to him.
 
 
 
